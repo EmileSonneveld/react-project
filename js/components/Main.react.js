@@ -12,7 +12,7 @@ require('../../node_modules/bootstrap/js/modal.js');
 const React = require('react');
 
 
-function getTodoState() {
+function assembleState() {
   return {
     dataStoreData: DataStore.getData(), // Lovely name, isn't is?
     // ... Other state here
@@ -22,7 +22,7 @@ function getTodoState() {
 const Main = React.createClass({
 
   getInitialState: function() {
-    return getTodoState();
+    return assembleState();
   },
 
   componentDidMount: function() {
@@ -46,7 +46,7 @@ const Main = React.createClass({
    * Event handler for 'change' events coming from the DataStore
    */
   _onChange: function() {
-    this.setState(getTodoState());
+    this.setState(assembleState());
   }
 
 });

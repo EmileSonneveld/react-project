@@ -4,7 +4,7 @@
 
 const AppDispatcher = require('../dispatcher/AppDispatcher');
 const EventEmitter = require('events').EventEmitter;
-const TodoConstants = require('../constants/TodoConstants');
+const MessageConstants = require('../constants/MessageConstants');
 const assign = require('object-assign');
 
 const CHANGE_EVENT = 'change';
@@ -44,12 +44,12 @@ AppDispatcher.register(function(action) {
 
   switch(action.actionType) {
 
-    case TodoConstants.INCREASE_COUNT_VALUE:
+    case MessageConstants.INCREASE_COUNT_VALUE:
       _myData.countValue += action.extraValue;
       DataStore.emitChange();
       break;
 
-    // case TodoConstants...
+    // case MessageConstants...
 
     default:
       // no op

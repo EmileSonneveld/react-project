@@ -10,13 +10,13 @@
  */
 
 const AppDispatcher = require('../dispatcher/AppDispatcher');
-const TodoConstants = require('../constants/TodoConstants');
+const MessageConstants = require('../constants/MessageConstants');
 
 const DispatchedActions = {
 
   addToValue: function(extraValue) {
     AppDispatcher.dispatch({
-      actionType: TodoConstants.INCREASE_COUNT_VALUE,
+      actionType: MessageConstants.INCREASE_COUNT_VALUE,
       extraValue: extraValue,
     });
   },
